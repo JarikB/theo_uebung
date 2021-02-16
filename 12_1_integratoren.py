@@ -67,7 +67,7 @@ def integral_2(mu, T):
     F = 0
     de = 1e-4
     Fde = 1
-    while ((e<mu) or (Fde>1e-10)):
+    while ((e<mu) or (Fde>1e-10)) and F<2:
         Fde = e*f(mu, T, e)*de
         F += Fde
         e += de
